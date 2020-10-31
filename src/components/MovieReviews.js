@@ -7,3 +7,7 @@ const MovieReviews = (props) => {
       <div className="review" key={movieReview.display_title + index}>
       
       <h3>{movieReview.display_title}</h3>
+      
+      </div>
+    ));
+  };
