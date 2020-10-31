@@ -15,3 +15,14 @@ class SearchableMovieReviewsContainer extends Component {
         searchTerm: "",
       };
     }
+    
+    handleSearchInput = (event) => {
+      this.setState({ searchTerm: event.target.value });
+    };
+
+    handleSubmit = (event) => {
+      event.preventDefault();
+      fetch(URL + "&query=" + this.state.searchTerm)
+        .then((resp) => resp.json())
+        .then((data) => this.setState({ reviews: data.results }));
+    };
