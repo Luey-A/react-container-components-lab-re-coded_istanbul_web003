@@ -14,3 +14,5 @@ const MovieReviews = (props) => {
   
   return <div className="review-list">{renderReviews()}</div>;
 };
+
+export default MovieReviews;
