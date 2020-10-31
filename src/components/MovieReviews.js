@@ -11,3 +11,6 @@ const MovieReviews = (props) => {
       </div>
     ));
   };
+  
+  return <div className="review-list">{renderReviews()}</div>;
+};
